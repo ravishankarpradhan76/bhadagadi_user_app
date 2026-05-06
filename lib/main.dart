@@ -1,3 +1,5 @@
+import 'package:bhadagadi_user_app/resources/routes/routes.dart';
+import 'package:bhadagadi_user_app/resources/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
+      initialRoute: RoutesName.splash,
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
