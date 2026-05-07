@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bhadagadi_user_app/resources/button/custom_button.dart';
+import 'package:bhadagadi_user_app/resources/routes/routes_name.dart';
 import 'package:bhadagadi_user_app/resources/strings/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
@@ -118,7 +119,9 @@ class _OtpViewState extends State<OtpView> {
               const SizedBox(height: 30),
 
               /// Button
-             CustomButton(title: AppStrings.verifyContinue, onTap: (){})
+             CustomButton(title: AppStrings.verifyContinue, onTap: (){
+               Navigator.pushNamed(context, RoutesName.dashboardView);
+             })
             ],
           ),
         ),

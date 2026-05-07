@@ -10,11 +10,13 @@ class AppColors {
   static const Color background = Color(0xFFFFFFFF);
   static const Color backgroundLight = Color(0xFFF9F9F9);
   static const Color screenBg = Color(0xFFF8FBFF);
+  static  Color bg = Colors.grey.shade50 ;
 
   // ⚫ Text Colors
   static const Color textPrimary = Color(0xFF111111);
   static const Color textSecondary = Color(0xFF888888);
   static const Color textHint = Color(0xFFCCCCCC);
+  static  Color subTitle= Colors.grey.shade600 ;
 
   // 🟢 Success / Green
   static const Color success = Color(0xFF22C55E);
@@ -36,6 +38,7 @@ class AppColors {
   // 🧱 Cards
   static const Color card = Color(0xFFFFFFFF);
   static const Color cardAlt = Color(0xFFF7F7F7);
+  static Color cardgrey = Colors.grey;
 
   // 🟡 Chips / Tags
   static const Color chipBg = Color(0xFFFFF7EB);

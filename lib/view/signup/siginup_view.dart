@@ -118,7 +118,7 @@ class _SignupViewState extends State<SignupView> {
                   },
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
 
                 /// Password
                 TextFormField(

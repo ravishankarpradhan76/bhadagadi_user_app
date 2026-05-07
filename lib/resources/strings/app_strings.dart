@@ -25,6 +25,7 @@ class AppStrings {
 
   // 🔹 Booking Flow
   static const String bookRide = "Book a Ride";
+  static const String whereTo = "Where are you going ?";
   static const String selectTripType = "Select trip type";
 
   static const String oneWay = "One-Way";
@@ -35,6 +36,9 @@ class AppStrings {
   static const String continueText = "Continue";
 
   // 🔹 Location
+  static const String planRide = "Plan your ride";
+  static const String title = "Title";
+  static const String subTitle = "Subtitle";
   static const String setPickup = "Set Pickup";
   static const String setDrop = "Set Drop";
   static const String pickupLocation = "Pickup location";
