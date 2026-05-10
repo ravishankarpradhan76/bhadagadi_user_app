@@ -81,7 +81,7 @@ class AppStrings {
   static const String findingDriver = "Finding your driver...";
   static const String cancelRequest = "Cancel Request";
   static const String driverAssigned = "Driver Assigned";
-  static const String arrivingSoon = "Arriving in";
+  static const String arrivingSoon = "Arriving in - min";
   static const String vehicle = "Vehicle";
   static const String chat = "Chat";
   static const String docs = "Docs";

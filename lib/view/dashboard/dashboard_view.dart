@@ -19,13 +19,19 @@ class DashboardView extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppColors.bg,
-        leading: const Padding(
-          padding: EdgeInsets.all(8.0),
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundColor: AppColors.primary,
-            child: Icon(Icons.person, color: AppColors.backgroundLight),
+            child: IconButton(
+              color: AppColors.backgroundLight,
+              onPressed: () {
+                Navigator.pushNamed(context, RoutesName.profileView);
+              },
+              icon: const Icon(Icons.person),
+            ),
           ),
-        ),
+      ),
         title: Container(
           height: 45,
           decoration: BoxDecoration(
@@ -53,12 +59,21 @@ class DashboardView extends StatelessWidget {
             ),
           ),
         ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 12),
-            child: Icon(Icons.notifications_none, color: AppColors.textPrimary),
-          ),
-        ],
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: IconButton(
+                color: AppColors.textPrimary,
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    RoutesName.notificationView,
+                  );
+                },
+                icon: const Icon(Icons.notifications_none),
+              ),
+            ),
+          ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -125,7 +140,9 @@ class DashboardView extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
-            CustomButton(title: 'Continue', onTap: () {}),
+            CustomButton(title: 'Continue', onTap: () {
+              Navigator.pushNamed(context, RoutesName.rideView);
+            }),
           ],
         ),
       ),

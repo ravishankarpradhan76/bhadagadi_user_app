@@ -20,4 +20,15 @@ class RoutesName {
 
   static const String fareView = "fare_estimate";
 
+  static const String tripView ="trip_view";
+
+  static const String findDriver = "find_driver";
+
+  static const String assignDriver = "assign_driver";
+
+  static const String profileView = "profile_view";
+
+  static const String myTripView = "my_trip_view";
+
+  static const String notificationView = "notification_view";
 }

@@ -5,16 +5,22 @@ class CustomButton extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
   final Color? color;
+  final Color? titleColor;
   final double height;
   final bool isLoading;
+  final bool showBorder;
+  final Color? borderColor;
 
   const CustomButton({
     super.key,
     required this.title,
     required this.onTap,
     this.color,
+    this.titleColor,
     this.height = 55,
     this.isLoading = false,
+    this.showBorder = false,
+    this.borderColor,
   });
 
   @override
@@ -24,9 +30,16 @@ class CustomButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: color ??  AppColors.primary,
+          backgroundColor: color ?? AppColors.primary,
+          elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
+            side: showBorder
+                ? BorderSide(
+              color: borderColor ?? AppColors.primary,
+              width: 1,
+            )
+                : BorderSide.none,
           ),
         ),
         onPressed: isLoading ? null : onTap,
@@ -41,9 +54,10 @@ class CustomButton extends StatelessWidget {
         )
             : Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 16,
-            color: Colors.white,
+            color: titleColor ?? Colors.white,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),

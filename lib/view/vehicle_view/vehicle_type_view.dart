@@ -4,6 +4,7 @@ import 'package:bhadagadi_user_app/resources/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../resources/button/appbar.dart';
 import '../../resources/colors/app_colors.dart';
 
 class ChoosevehicleView extends StatelessWidget {
@@ -27,30 +28,11 @@ class ChoosevehicleView extends StatelessWidget {
               const SizedBox(height: 10),
 
               /// HEADER
-              Row(
-                children: [
-                  Container(
-                    height: 50,
-                    width: 50,
-
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-
-                  const SizedBox(width: 16),
-
-                  const Text(
-                    "Choose Vehicle",
-
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.textPrimary,
-                    ),
-                  ),
-                ],
+              CustomTitleBar(
+                title: "Choose Vehicle",
+                onBack: () {
+                  Navigator.pop(context);
+                },
               ),
 
               const SizedBox(height: 25),
@@ -170,16 +152,11 @@ class ChoosevehicleView extends StatelessWidget {
               CustomButton(
                 title: 'Next',
                 onTap: () {
-                  final selectedVehicle =
-                  provider.vehicles[provider.selectedIndex!];
 
                   Navigator.pushNamed(
                     context,
-                    RoutesName.fareView,
+                    RoutesName.tripView,
 
-                    arguments: {
-                      "price": selectedVehicle['price'],
-                    },
                   );
                 },
               ),
